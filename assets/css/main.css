@@ -21,6 +21,10 @@ a
     color: var(--linkColor);
     text-decoration: none; /* Saco la línea inferior del link */
 }
+a:hover
+{
+    color: var(--linkHover);
+}
 /*  */
 body
 {
@@ -88,6 +92,14 @@ main
         background: var(--list);
     }
     main ul li h2 {padding: 0;margin:5px 0 20px 0;}
+    main ul li .readMore a 
+    {
+        width: 100%;
+        height: 100%;
+        display: block; /* Para que el botón sea lo más "clickeable" posible */
+        color: var(--alternativeP);
+    }
+    main ul li .readMore a:hover {color: var(--linkHover);}
     main ul li .readMore
     {
         background: var(--readMore);
