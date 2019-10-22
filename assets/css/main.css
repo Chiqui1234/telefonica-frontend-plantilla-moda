@@ -1,0 +1,138 @@
+*
+{
+    box-sizing: border-box; /* El padding está incluído en el tamaño especificado en el CSS */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root
+{
+    --p                 : #292929;
+    --alternativeP      : #fafafa;
+    --headerColor       : #C3B7BC;
+    --linkColor         : #53565A;
+    --linkHover         : #000;
+    --readMore          : #5F4028;
+    --list              : #C8C9C7;
+    --background        : #D9D9D6;
+}
+body
+{
+    width: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden; /* Elimina la barra lateral */
+    background: var(--background);
+}
+/* Auxiliares */
+.padding {padding: 10px;}
+.gap {gap: 10px;}
+.grid-2 {display: grid;grid-template-columns: repeat(2, 1fr); /* 1fr 1fr */}
+.grid-4 {display: grid;grid-template-columns: repeat(4, 1fr); /* 1fr 1fr 1fr 1fr */}
+/*  */
+header
+{
+    width: 100%;
+    background: var(--headerColor);
+    display: grid; /* Para crear una grilla */
+    grid-template-columns: 173px auto;
+    grid-template-rows: 25px 25px 25px; /* repeat(3, 25px); */
+    position: fixed;
+    opacity: .95;
+    top: 0;
+    left: 0;
+}
+header .logo
+{
+    background: url('../img/Mazo.png');
+    background-size: 100%;
+    grid-row: 1 / span 3;
+}
+header nav
+{
+    grid-row: 2;
+}
+    header a
+    {
+        color: var(--linkColor);
+        text-decoration: none; /* Saco la línea inferior del link */
+    }
+    header nav ul, main ul, .payments ul, .ship ul, .fullWidth ul
+    {
+        text-align: center;
+        list-style: none; /* Eliminamos los 'dots' de la lista */
+        padding: 0;
+        margin: 0;
+    }
+    header nav ul li 
+    {
+        display: inline-block; /* Posicionamiento horizontal */
+        font-variant: small-caps;
+        margin: 0 10px 0 10px;
+    }
+main 
+{
+    width: 97%;
+    margin: 115px auto;
+}
+    main ul li
+    {
+        padding: 10px 30px 10px 30px;
+        background: var(--list);
+    }
+    main ul li h2 {padding: 0;margin:5px 0 20px 0;}
+    main ul li .readMore
+    {
+        background: var(--readMore);
+        color: var(--alternativeP);
+        border-radius: 25px;
+    }
+#newsletter
+{
+    width: 50%;
+    margin: 0 auto 10px auto; /* Para separarse del footer */
+}
+    #newsletter .text
+    {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid var(--p);
+        background: var(--background);
+        margin-bottom: 10px;
+    }
+    #newsletter .submitBtn
+    {
+        width: 100%;
+        border-radius: 25px;
+        border: 2px solid var(--p);
+        background: var(--background);
+    }
+footer 
+{
+    width: 100%;
+    text-align: center;
+}
+    footer .fullWidth
+    {
+        width: 100%;
+    }
+        footer .fullWidth ul li
+        {
+            margin: 0 5px 0 5px;
+            display: inline-block;
+        }
+/* Responsive */
+@media (max-width: 1279px) { /* Entre 1023px y 1279px (tablets) */
+    .grid-2
+    {
+        grid-template-columns: 1fr;
+    }
+    .grid-4 
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 799px) { /* 1023px o menor */
+    .grid-2, .grid-4 
+    {
+        grid-template-columns: 1fr;
+    }
+}
