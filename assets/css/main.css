@@ -12,8 +12,16 @@
     --linkHover         : #000;
     --readMore          : #5F4028;
     --list              : #C8C9C7;
+    --footer1           : #2D2926; /* Fondo de métodos de pago y envíos */
+    --footer2           : #212121; /* Fondo del pie de página (no encontramos uno en el pdf, así que lo inventamos nosotros */
     --background        : #D9D9D6;
 }
+a
+{
+    color: var(--linkColor);
+    text-decoration: none; /* Saco la línea inferior del link */
+}
+/*  */
 body
 {
     width: 100%;
@@ -46,15 +54,16 @@ header .logo
     background-size: 100%;
     grid-row: 1 / span 3;
 }
+    header .logo a
+    {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
 header nav
 {
     grid-row: 2;
 }
-    header a
-    {
-        color: var(--linkColor);
-        text-decoration: none; /* Saco la línea inferior del link */
-    }
     header nav ul, main ul, .payments ul, .ship ul, .fullWidth ul
     {
         text-align: center;
@@ -71,7 +80,7 @@ header nav
 main 
 {
     width: 97%;
-    margin: 115px auto;
+    margin: 115px auto 0 auto;
 }
     main ul li
     {
@@ -88,7 +97,7 @@ main
 #newsletter
 {
     width: 50%;
-    margin: 0 auto 10px auto; /* Para separarse del footer */
+    margin: 40px auto 40px auto; /* Para separarse del main y footer */
 }
     #newsletter .text
     {
@@ -101,6 +110,7 @@ main
     #newsletter .submitBtn
     {
         width: 100%;
+        padding: 2px;
         border-radius: 25px;
         border: 2px solid var(--p);
         background: var(--background);
@@ -108,11 +118,14 @@ main
 footer 
 {
     width: 100%;
+    color: var(--alternativeP);
     text-align: center;
+    background: var(--footer2);
 }
     footer .fullWidth
     {
         width: 100%;
+        background: var(--footer1);
     }
         footer .fullWidth ul li
         {
@@ -129,10 +142,18 @@ footer
     {
         grid-template-columns: repeat(2, 1fr);
     }
+    #newsletter
+    {
+        width: 60%;
+    }
 }
 @media (max-width: 799px) { /* 1023px o menor */
     .grid-2, .grid-4 
     {
         grid-template-columns: 1fr;
+    }
+    #newsletter
+    {
+        width: 85%;
     }
 }
