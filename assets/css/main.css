@@ -159,7 +159,7 @@ footer
         width: 60%;
     }
 }
-@media (max-width: 799px) { /* 1023px o menor */
+@media (max-width: 1023px) { /* 1023px o menor */
     .grid-2, .grid-4 
     {
         grid-template-columns: 1fr;
