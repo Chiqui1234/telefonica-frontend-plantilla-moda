@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <title>Shop</title>
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/main.min.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
         <meta name="author" content="" />
         <meta name="description" content="Sitio web de moda española" />
@@ -83,5 +83,23 @@
         </ul>
     </div>
 </footer>
+
+<div id="cookiesWarning" class="grid-2">
+    <div>
+        <p>Utilizamos "cookies" propias y de terceros para elaborar información estadística y mostrarle publicidad personalizada a través del análisis de su navegación.</p>
+    </div>
+    <div>
+        <p><a href="#" onclick="hide('cookiesWarning');">Acepto</a> | <a href="#">Más información y política de cookies</a></p>
+    </div>
+</div>
+
+<script>
+    function hide(identifier)
+    {
+        let obj = document.getElementById(identifier);
+        obj.style.display = 'none';
+    }
+</script>
+
 </body>
 </html>
