@@ -134,7 +134,7 @@ main
     width: 100%;
     background: var(--backgroundCookies);
     color: var(--alternativeP);
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     z-index: 99;
@@ -149,6 +149,7 @@ main
 /*  */
 #closeBtn
 {
+    float: right;
     background: var(--background);
     outline: none;
     border: 1px solid var(--footer2);
