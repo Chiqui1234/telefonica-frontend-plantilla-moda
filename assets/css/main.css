@@ -149,6 +149,7 @@ main
 /*  */
 #closeBtn
 {
+    background: var(--background);
     outline: none;
     border: 1px solid var(--footer2);
     text-align: center;
