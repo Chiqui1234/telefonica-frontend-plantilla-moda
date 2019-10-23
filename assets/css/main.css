@@ -22,6 +22,7 @@ a
 {
     color: var(--linkColor);
     text-decoration: none; /* Saco la línea inferior del link */
+    cursor: pointer; /* ya que si <a> no tiene 'href', el cursor queda en default cuándo pasa el cursor por encima */
 }
 a:hover
 {
@@ -48,7 +49,7 @@ header
     background: var(--headerColor);
     display: grid; /* Para crear una grilla */
     grid-template-columns: 173px auto;
-    grid-template-rows: 25px 25px 25px; /* repeat(3, 25px); */
+    grid-template-rows: repeat(3, 25px);
     position: fixed;
     opacity: .95;
     top: 0;
@@ -177,7 +178,7 @@ footer
             display: inline-block;
         }
 /* Responsive */
-@media (max-width: 1279px) { /* Entre 1023px y 1279px (tablets) */
+@media (max-width: 1279px) { /* Entre 1024px y 1279px (tablets) */
     .grid-2
     {
         grid-template-columns: 1fr;
@@ -195,6 +196,12 @@ footer
     .grid-2, .grid-4 
     {
         grid-template-columns: 1fr;
+    }
+    header 
+    {
+        grid-template-columns: 86px auto;
+        grid-template-rows: repeat(3, 14px);
+        font-size: 14px;
     }
     #newsletter
     {
