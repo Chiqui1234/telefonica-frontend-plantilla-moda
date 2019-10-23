@@ -34,7 +34,7 @@ body
     width: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden; /* Elimina la barra lateral */
+    overflow-x: hidden; /* Elimina la barra de deslizamiento lateral */
     background: var(--background);
 }
 /* Auxiliares */
@@ -199,9 +199,13 @@ footer
     }
     header 
     {
-        grid-template-columns: 86px auto;
-        grid-template-rows: repeat(3, 14px);
-        font-size: 14px;
+        grid-template-columns: 86px auto; /* para redimensionar el logo */
+        grid-template-rows: repeat(3, 14px); /* para redimensionar el logo */
+        font-size: 14px; /* disminuyo el tamaño de la lista */
+    }
+    main 
+    {
+        margin: 85px auto 0 auto;
     }
     #newsletter
     {
