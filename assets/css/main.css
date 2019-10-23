@@ -38,8 +38,8 @@ body
     background: var(--background);
 }
 /* Auxiliares */
-.padding {padding: 10px;}
-.gap {gap: 10px;}
+.padding {padding: 10px;} /* Padding estandarizado por nuestra plantilla */
+.gap {gap: 10px;} /* Espacio entre celdas de la grilla */
 .grid-2 {display: grid;grid-template-columns: repeat(2, 1fr); /* 1fr 1fr */}
 .grid-4 {display: grid;grid-template-columns: repeat(4, 1fr); /* 1fr 1fr 1fr 1fr */}
 /*  */
@@ -83,6 +83,20 @@ header nav
         display: inline-block; /* Posicionamiento horizontal */
         font-variant: small-caps;
         margin: 0 10px 0 10px;
+    }
+    header nav ul li ul
+    {
+        display: none;
+        position: absolute;
+        min-width: 140px;
+    }
+    header nav ul li:hover > ul {
+
+        display: block;
+
+    }
+    header nav ul li ul li {
+        position: relative;
     }
 main 
 {
