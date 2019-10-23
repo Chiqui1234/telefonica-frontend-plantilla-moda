@@ -15,6 +15,7 @@
     --footer1           : #2D2926; /* Fondo de métodos de pago y envíos */
     --footer2           : #212121; /* Fondo del pie de página (no encontramos uno en el pdf, así que lo inventamos nosotros */
     --background        : #D9D9D6;
+    --backgroundCookies : rgba(149, 148, 148,0.5);
 }
 a
 {
