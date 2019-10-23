@@ -145,6 +145,14 @@ main
         text-decoration: none;
         border-bottom: 1px solid var(--alternativeP);
     }
+/*  */
+#closeBtn
+{
+    outline: none;
+    border: 1px solid var(--footer2);
+    text-align: center;
+}
+/*  */
 footer 
 {
     width: 100%;
