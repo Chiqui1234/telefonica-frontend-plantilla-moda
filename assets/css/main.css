@@ -16,6 +16,7 @@
     --footer2           : #212121; /* Fondo del pie de página (no encontramos uno en el pdf, así que lo inventamos nosotros */
     --background        : #D9D9D6;
     --backgroundCookies : rgba(149, 148, 148,0.5);
+    --radius            : 25px;
 }
 a
 {
@@ -105,7 +106,7 @@ main
     {
         background: var(--readMore);
         color: var(--alternativeP);
-        border-radius: 25px;
+        border-radius: var(--radius);
     }
 #newsletter
 {
@@ -124,7 +125,7 @@ main
     {
         width: 100%;
         padding: 2px;
-        border-radius: 25px;
+        border-radius: var(--radius);
         border: 2px solid var(--p);
         background: var(--background);
     }
@@ -151,6 +152,9 @@ main
     outline: none;
     border: 1px solid var(--footer2);
     text-align: center;
+    position: relative;
+    top: 10px;
+    right: 10px;
 }
 /*  */
 footer 
