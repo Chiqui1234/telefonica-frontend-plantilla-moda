@@ -5,6 +5,7 @@
         <link rel="shortcut icon" href="favicon.png" type="image/png">
         <link rel="stylesheet" href="assets/css/main.min.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+        <meta charset="UTF-8" />
         <meta name="author" content="LUISIG" />
         <meta name="description" content="Sitio web de moda española" />
         <meta name="keywords" content="moda, shopping, tienda, niños, mujer, hombre, ropa" />
@@ -118,17 +119,20 @@
     </div>
     <div>
         <button type="button" id="closeBtn" class="padding" onclick="hide('cookiesWarning');">X</button>
-        <p class="padding"><a onclick="hide('cookiesWarning');">Acepto</a> | <a href="#">Más información y política de cookies</a></p>
+        <p class="padding"><a onclick="setCookie('cookiesPolicy', 'accept', 15);hide('cookiesWarning');">Acepto</a> | <a href="#">Más información y política de cookies</a></p>
     </div>
 </div> <!-- !cookiesWarning -->
-
+<script src="assets/js/cookie.js"></script>
 <script>
     function hide(identifier)
     {
         let obj = document.getElementById(identifier);
         obj.style.display = 'none';
     }
+    if( (cookiesPolicy = getCookie('cookiesPolicy')) ) /* Si las cookies ya fueron aceptadas */
+    {
+        document.getElementById("cookiesWarning").style.display = 'none';
+    }
 </script>
-
 </body>
 </html>

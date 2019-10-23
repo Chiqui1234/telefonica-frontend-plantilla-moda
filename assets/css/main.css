@@ -2,6 +2,7 @@
 {
     box-sizing: border-box; /* El padding está incluído en el tamaño especificado en el CSS */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: .5s color;
 }
 :root
 {
@@ -90,10 +91,9 @@ header nav
         position: absolute;
         min-width: 140px;
     }
-    header nav ul li:hover > ul {
-
+    header nav ul li:hover > ul
+    {
         display: block;
-
     }
     header nav ul li ul li {
         position: relative;
