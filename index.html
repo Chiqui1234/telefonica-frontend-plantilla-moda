@@ -130,6 +130,10 @@
         let obj = document.getElementById(identifier);
         obj.style.display = 'none';
     }
+    if( cookiesPolicy = getCookie('cookiesWarning') )
+    {
+        document.getElementById('cookiesWarning').style.display = 'none';
+    }
 </script>
 </body>
 </html>
