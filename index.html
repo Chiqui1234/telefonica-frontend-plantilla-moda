@@ -124,6 +124,7 @@
 </div> <!-- !cookiesWarning -->
 <script src="assets/js/cookie.js"></script>
 <script>
+    let cookiesPolicy;
     function hide(identifier)
     {
         let obj = document.getElementById(identifier);
@@ -131,7 +132,7 @@
     }
     if( (cookiesPolicy = getCookie('cookiesPolicy')) ) /* Si las cookies ya fueron aceptadas */
     {
-        console.info(cookiesPolicy);
+        console.info('cookiesPolicy');
         document.getElementById("cookiesWarning").style.display = 'none';
     }
 </script>
