@@ -123,13 +123,9 @@
     </div>
 </div> <!-- !cookiesWarning -->
 <script src="assets/js/cookie.js"></script>
+<script src="assets/js/hide.js"></script>
 <script>
     let cookiesPolicy;
-    function hide(identifier)
-    {
-        let obj = document.getElementById(identifier);
-        obj.style.display = 'none';
-    }
     if( cookiesPolicy = getCookie('cookiesPolicy') )
     {
         document.getElementById('cookiesWarning').style.display = 'none';
