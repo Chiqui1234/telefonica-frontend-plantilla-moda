@@ -17,3 +17,4 @@ Hicimos algunos cambios estéticos al sitio web, para darle una "lavada de cara"
 
 # Otros
 * el parámetro 'author' de la etiqueta **meta**, en teoría, soporta uno o más autores (teníamos dudas pero lo hemos buscado)
+* no entendimos si 'Camisa', 'Pantalón', 'Falda' y 'Zapato' correspondían a todos los menúes o sólo a 'Hombre', 'Niño', 'Mujer', 'Accesorios' respectivamente. Lo aplicamos a todos los menúes.
